@@ -3,5 +3,5 @@ from django.views import generic
 from .models import Post
 
 class PostList(generic.ListView):
-    mqueryset = Post.objects.all()
+    queryset = Post.objects.all()
     template_name = "post_list.html"
