@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-pt=%dlov^)g(#28jgk(3$=9vk&lha@p5x+e3(2=s17dgyu&g3f
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-katepaulausk-djangoblog-0guexgxr09h.ws-eu110.gitpod.io','.herokuapp.com']
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
     'blog',
 ]
 
@@ -56,6 +57,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'codestar.urls'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 TEMPLATES = [
     {
@@ -128,7 +131,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
