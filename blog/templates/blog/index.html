@@ -42,8 +42,7 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}"
-            class="page-link">&laquo; PREV</a></li>
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a></li>
             {% endif %}
 
             {% if page_obj.has_next %}
@@ -59,5 +58,5 @@
 
 
 {% block copyright %}
-    <p class="m-0 text-center text-white">Copyright 2023 Kat Pau</p>
+<p class="m-0 text-center text-white">Copyright 2023 Kat Pau</p>
 {% endblock copyright %}
